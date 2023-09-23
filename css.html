@@ -1,0 +1,31 @@
+
+.image-container img,
+.thumbnail-container img {
+    width: 100%; /* Make images fill their container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 500px; /* Limit maximum width for larger screens */
+}
+
+/* Center images in their containers */
+.image-container,
+.thumbnail-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px; /* Add spacing around containers */
+}
+
+/* Style thumbnails */
+.thumbnail {
+    max-width: 150px; /* Set a specific width for thumbnails */
+    border: 2px solid #000; /* Add a border to thumbnails */
+    margin: 10px; /* Add spacing between thumbnails */
+}
+
+/* Make images responsive */
+@media (max-width: 768px) {
+    .image-container,
+    .thumbnail-container {
+        flex-direction: column; /* Stack containers on small screens */
+        align-items: center; /* Center items in containers */
+    }
+}
